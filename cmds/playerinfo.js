@@ -35,7 +35,7 @@ let i = new Discord.RichEmbed()
     .addField(":interrobang: TEEMO BOT :interrobang:","**Player not saved**")
     .setColor('RED')
     .addField("**If you want to save: **", "**!t save REGION NICKNAME**")
-    .setFooter('Teemo bot, created by hyperDoomer. To invite Teemo to your server - !t i', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
+    .setFooter('Teemo bot, created by hyperDoomer. Invite Teemo to your server !t invite', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
     return message.channel.send(i)};
 let chregion = (db[0].region || args[0]);
 let nickname = (args.slice(1).join(' ') || db[0].nickname);
@@ -48,7 +48,7 @@ if(regions.indexOf(chregion.toUpperCase()) ==-1)  {
     .addField(":interrobang: TEEMO BOT :interrobang:","**Wrong region**")
     .setColor('RED')
     .addField("**Please, choose region:** \n**"+regions.join(', ')+"**", "**!t player REGION NICKNAME**")
-    .setFooter('Teemo bot, created by hyperDoomer. To invite Teemo to your server - !t i', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
+    .setFooter('Teemo bot, created by hyperDoomer. Invite Teemo to your server !t invite', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
     return message.channel.send(i)};
 let region = (changereg(chregion.toUpperCase()));
 
@@ -63,7 +63,7 @@ if(!json){
     .addField(":interrobang: TEEMO BOT :interrobang:", "**Player information:**")
     .addField("<:borderarrowhover5432523452345234:603725501672062987>**Error: 'Wrong name'**<:borderarrowhover2451253412321312:603725502770839572>","**!t player REGION NICKNAME**")
     .setColor('RED')
-    .setFooter("Teemo bot, created by hyperDoomer.", 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
+    .setFooter('Teemo bot, created by hyperDoomer. Invite Teemo to your server !t invite', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
     return message.channel.send(je)};
 //SUMMONER ID
 let playeridurl = (`https://${region}.api.riotgames.com/lol/league/v4/entries/by-summoner/${json.id+'?api_key='+riotkey}`);
@@ -133,7 +133,7 @@ embed.addField('<:tft4212354325983923740723042:603314634501390366>__RANKED TFT__
 
 
 //
-embed.setFooter('Teemo bot, created by hyperDoomer.', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
-message.channel.send(embed)
+embed.setFooter('Teemo bot, created by hyperDoomer. Invite Teemo to your server !t invite', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
+message.channel.send(embed);
   
 }};

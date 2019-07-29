@@ -25,8 +25,8 @@ if(regions.indexOf(args[0].toUpperCase()) ==-1)  {
     .addField(":interrobang: TEEMO BOT :interrobang:"," Invalid region")
     .setColor('RED')
     .addField("Please, choose region:", regions.join(', '))
-    .setFooter('Teemo bot, created by hyperDoomer. To invite Teemo to your server - !t i', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
-    return message.channel.send(i)
+    .setFooter('Teemo bot, created by hyperDoomer. Invite Teemo to your server !t invite', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
+    return message.channel.send(i);
 };
 let duserid = message.author.id;
 let sql = `INSERT INTO summoners (duserid, region, nickname) VALUES ('${duserid}', '${args[0]}', '${args[1]}') ON DUPLICATE KEY UPDATE region = '${args[0]}', nickname = '${args[1]}'`;
