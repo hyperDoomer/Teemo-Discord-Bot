@@ -1,8 +1,9 @@
+const Discord = module.require("discord.js");
 module.exports = {
 	name: 'ping',
 	description: 'Ping!',
   	cooldown: 3,
-  	aliases: ['pingg'],
+  	aliases: ['ping'],
 	execute(bot, message, args) {
 	const embed = new Discord.RichEmbed()
     	.setColor('GREEN')

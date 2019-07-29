@@ -7,7 +7,7 @@ let riotkey = config.riotkey;
 module.exports = {
 	name: 'player',
 	description: 'Player information',
-	aliases: ['info','profile'],
+	aliases: ['info','profile','p'],
 	usage: '[!t player REGION NICKNAME]',
 	cooldown: 5,
 	async execute(bot, message, args) {
