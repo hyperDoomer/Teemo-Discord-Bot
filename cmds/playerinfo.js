@@ -78,7 +78,30 @@ let jsonc= [];
 for (let i = 0; i < 3; i++) {
     let champion = `https://cdn.communitydragon.org/${version[0]}/champion/${jsonmst[i].championId}/data`;
     const result = await request({uri: champion, json: true});
-    jsonc.push(result)}
+    jsonc.push(result)};
+
+//SUMMONER LEVEL EMOJI
+let elevel;
+if(json.summonerLevel >=40 && json.summonerLevel <50) { elevel = "<:prestige_lvl_40_inventory1:605440391868710947>"}
+else if(json.summonerLevel >=50 && json.summonerLevel <75) { elevel = "<:prestige_lvl_50_inventory1:605440394368647169>"}
+else if(json.summonerLevel >=75 && json.summonerLevel <100) { elevel = "<:prestige_lvl_75_inventory1:605440395928797204>"}
+else if(json.summonerLevel >=100 && json.summonerLevel <125) { elevel = "<:prestige_lvl_100_inventory1:605440396742623243>"}
+else if(json.summonerLevel >=125 && json.summonerLevel <150) { elevel = "<:prestige_lvl_125_inventory1:605440398789181440>"}
+else if(json.summonerLevel >=150 && json.summonerLevel <175) { elevel = "<:prestige_lvl_150_inventory1:605441159782989887>"}
+else if(json.summonerLevel >=175 && json.summonerLevel <200) { elevel = "<:prestige_lvl_175_inventory1:605441160369930241>"}
+else if(json.summonerLevel >=200 && json.summonerLevel <225) { elevel = "<:prestige_lvl_200_inventory1:605440396616531978>"}
+else if(json.summonerLevel >=225 && json.summonerLevel <250) { elevel = "<:prestige_lvl_225_inventory1:605440397166247941>"}
+else if(json.summonerLevel >=250 && json.summonerLevel <275) { elevel = "<:prestige_lvl_250_inventory1:605441159480999955>"}
+else if(json.summonerLevel >=275 && json.summonerLevel <300) { elevel = "<:prestige_lvl_275_inventory1:605440397086294076>"}
+else if(json.summonerLevel >=300 && json.summonerLevel <325) { elevel = "<:prestige_lvl_300_inventory1:605440399305080842>"}
+else if(json.summonerLevel >=325 && json.summonerLevel <350) { elevel = "<:prestige_lvl_325_inventory1:605441159845773334>"}
+else if(json.summonerLevel >=350 && json.summonerLevel <375) { elevel = "<:prestige_lvl_350_inventory1:605441159753367583>"}
+else if(json.summonerLevel >=375 && json.summonerLevel <400) { elevel = "<:prestige_lvl_375_inventory1:605441160458010675>"}
+else if(json.summonerLevel >=400 && json.summonerLevel <425) { elevel = "<:prestige_lvl_400_inventory1:605441159636189194>"}
+else if(json.summonerLevel >=425 && json.summonerLevel <450) { elevel = "<:prestige_lvl_425_inventory:605477510343426120>"}
+else if(json.summonerLevel >=450 && json.summonerLevel <475) { elevel = "<:prestige_lvl_450_inventory:605455923430948884>"}
+else if(json.summonerLevel >=475 && json.summonerLevel <500) { elevel = "<:prestige_lvl_475_inventory:605455922805866497>"}
+else if(json.summonerLevel >=500                           ) { elevel = "<:prestige_lvl_500_inventory:605455923166576670>"};
 
 //НАЧАЛО ЭМБЕДА
 let embed = new Discord.RichEmbed()
@@ -86,7 +109,7 @@ let embed = new Discord.RichEmbed()
     .setTitle(`<:borderarrowhover5432523452345234:603725501672062987> SUMMONER INFORMATION: **${json.name}** <:borderarrowhover2451253412321312:603725502770839572>`)
     .setColor('RED')
     .setThumbnail(`http://ddragon.leagueoflegends.com/cdn/${version[0]}/img/profileicon/${json.profileIconId}.png`)
-    .addField('<:Level12134424857261940547571:603310507763564592>LEVEL<:Level12134424857261940547571:603310507763564592>', "**<:Level12134424857261940547571:603310507763564592>"+json.summonerLevel+"<:Level12134424857261940547571:603310507763564592>**", true)
+    .addField('<:Level12134424857261940547571:603310507763564592>LEVEL<:Level12134424857261940547571:603310507763564592>', elevel+"**"+json.summonerLevel+"**"+elevel, true)
     .addField(':earth_americas:REGION', "**:earth_asia:"+region+"**", true)
 
 //Live game
