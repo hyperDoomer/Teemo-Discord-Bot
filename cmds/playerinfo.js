@@ -35,7 +35,7 @@ let i = new Discord.RichEmbed()
     .addField(":interrobang: TEEMO BOT :interrobang:","**Player not saved**")
     .setColor('RED')
     .addField("**If you want to save: **", "**!t save REGION NICKNAME**")
-    .setFooter('Teemo bot, created by hyperDoomer.', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
+    .setFooter('Teemo bot, created by hyperDoomer. To invite Teemo to your server - !t i', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
     return message.channel.send(i)};
 let chregion = (db[0].region || args[0]);
 let nickname = (args.slice(1).join(' ') || db[0].nickname);
