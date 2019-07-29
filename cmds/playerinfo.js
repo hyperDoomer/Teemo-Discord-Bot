@@ -36,6 +36,7 @@ let i = new Discord.RichEmbed()
     .setColor('RED')
     .addField("**If you want to save: **", "**!t save REGION NICKNAME**")
     .setFooter('Teemo bot, created by hyperDoomer. Invite Teemo to your server !t invite', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
+
     return message.channel.send(i)};
 let chregion = (db[0].region || args[0]);
 let nickname = (args.slice(1).join(' ') || db[0].nickname);
@@ -49,6 +50,7 @@ if(regions.indexOf(chregion.toUpperCase()) ==-1)  {
     .setColor('RED')
     .addField("**Please, choose region:** \n**"+regions.join(', ')+"**", "**!t player REGION NICKNAME**")
     .setFooter('Teemo bot, created by hyperDoomer. Invite Teemo to your server !t invite', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
+
     return message.channel.send(i)};
 let region = (changereg(chregion.toUpperCase()));
 
@@ -134,6 +136,6 @@ embed.addField('<:tft4212354325983923740723042:603314634501390366>__RANKED TFT__
 
 //
 embed.setFooter('Teemo bot, created by hyperDoomer. Invite Teemo to your server !t invite', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
-message.channel.send(embed);
+message.channel.send(embed)
   
 }};
