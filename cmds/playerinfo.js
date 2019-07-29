@@ -48,7 +48,7 @@ if(regions.indexOf(chregion.toUpperCase()) ==-1)  {
     .addField(":interrobang: TEEMO BOT :interrobang:","**Wrong region**")
     .setColor('RED')
     .addField("**Please, choose region:** \n**"+regions.join(', ')+"**", "**!t player REGION NICKNAME**")
-    .setFooter('Teemo bot, created by hyperDoomer.', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
+    .setFooter('Teemo bot, created by hyperDoomer. To invite Teemo to your server - !t i', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
     return message.channel.send(i)};
 let region = (changereg(chregion.toUpperCase()));
 
