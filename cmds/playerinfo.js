@@ -55,7 +55,7 @@ if(regions.indexOf(chregion.toUpperCase()) ==-1)  {
 let region = (changereg(chregion.toUpperCase()));
 
 //JSON данные
-let playerurl = (`https://${region}.api.riotgames.com/lol/summoner/v4/summoners/by-name/${nickname+'?api_key='+riotkey}`);
+let playerurl = (`https://${region}.api.riotgames.com/lol/summoner/v4/summoners/by-name/${encodeURIComponent(nickname)+'?api_key='+riotkey}`);
 const json = await request({uri: playerurl, json: true}).catch(() => {return false})
 
 //ПРОВЕРКА НИКНЕЙМА
