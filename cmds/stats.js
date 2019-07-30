@@ -6,6 +6,6 @@ module.exports = {
   	aliases: ['st'],
 	execute(bot, message, args) {
 let g = bot.guilds.size;
-message.author.send("Guilds= "+g);
+message.author.send("Guilds size= "+g);
 	},
 };
