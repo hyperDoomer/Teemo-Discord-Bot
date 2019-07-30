@@ -122,13 +122,14 @@ const jsonlive = await request({uri :liveurl, json: true}).catch(() => {return f
 if(!jsonlive) 
 {embed.addField('LIVE GAME', "Not playing");}
 else{
-let playtime = (Date.now() - jsonlive.gameStartTime)/1000;
+let playtimem = (Date.now() - jsonlive.gameStartTime)/1000;
+let playtimes = (Date.now() - jsonlive.gameStartTime)/1000;
 let lmode = changemod(jsonlive.gameQueueConfigId);
 let lplayer = jsonlive.participants.find(n => n.summonerId === json.id);
 let lchampion = `https://cdn.communitydragon.org/${version[0]}/champion/${lplayer.championId}/data`;
 const lresult = await request({uri: lchampion, json: true});
 var lemojichamp = bot.emojis.find(e => e.name === lresult.name.replace(' ', '').replace("'", "") && ['597817432840601600','602587428682989568','602587024251420672'].includes(e.guild.id));
-embed.addField('LIVE GAME', 'Playing '+lmode+" as "+lemojichamp+"**"+lresult.name+"**"+" ("+`${playtime / 60 | 0}:${playtime % 60}`+")");};
+embed.addField('LIVE GAME', 'Playing '+lmode+" as "+lemojichamp+"**"+lresult.name+"**"+" ("+`${playtimem / 60 | 0}:${playtimes % 60}`+")");};
 
 //SOLO
 var ranksolo = jsonid.find(n => n.queueType === 'RANKED_SOLO_5x5');
