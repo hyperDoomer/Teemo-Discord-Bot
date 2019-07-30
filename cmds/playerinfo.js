@@ -4,6 +4,7 @@ const config = require ('../botconfig.json');
 const changereg = require('../changereg.js');
 const changemod = require('../changemod.js');
 let riotkey = config.riotkey;
+const version = config.version;
 
 module.exports = {
 	name: 'player',
@@ -13,7 +14,6 @@ module.exports = {
 	cooldown: 5,
 	async execute(bot, message, args) {
 
-const version = await request({uri: "http://ddragon.leagueoflegends.com/api/versions.json", json: true});
 
 var mysql = require('mysql2/promise');
 var con = await mysql.createConnection({
