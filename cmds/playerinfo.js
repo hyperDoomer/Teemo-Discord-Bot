@@ -123,7 +123,7 @@ if(!jsonlive)
 {embed.addField('LIVE GAME', "Not playing");}
 else{
 let playtimem = (Date.now() - jsonlive.gameStartTime)/1000;
-let playtimes = (Date.now() - jsonlive.gameStartTime)/1000;
+let playtimes = Date.now() - jsonlive.gameStartTime;
 let lmode = changemod(jsonlive.gameQueueConfigId);
 let lplayer = jsonlive.participants.find(n => n.summonerId === json.id);
 let lchampion = `https://cdn.communitydragon.org/${version[0]}/champion/${lplayer.championId}/data`;
