@@ -80,7 +80,7 @@ const jsonmst = await request({uri: playermsturl, json: true});
 //CHAMPION ID
 let jsonc= [];
 for (let i = 0; i < 3; i++) {
-    let champion = `https://cdn.communitydragon.org/${version[0]}/champion/${jsonmst[i].championId}/data`;
+    let champion = `https://cdn.communitydragon.org/${version}/champion/${jsonmst[i].championId}/data`;
     const result = await request({uri: champion, json: true});
     jsonc.push(result)};
 
@@ -112,7 +112,7 @@ let embed = new Discord.RichEmbed()
     .setAuthor('Teemo Bot, for server: '+message.guild.name, message.guild.iconURL)
     .setTitle(`<:borderarrowhover5432523452345234:603725501672062987> SUMMONER INFORMATION: **${json.name}** <:borderarrowhover2451253412321312:603725502770839572>`)
     .setColor('RED')
-    .setThumbnail(`http://ddragon.leagueoflegends.com/cdn/${version[0]}/img/profileicon/${json.profileIconId}.png`)
+    .setThumbnail(`http://ddragon.leagueoflegends.com/cdn/${version}/img/profileicon/${json.profileIconId}.png`)
     .addField('<:Level12134424857261940547571:603310507763564592>LEVEL<:Level12134424857261940547571:603310507763564592>', elevel+"** "+json.summonerLevel+" **"+elevel, true)
     .addField(':earth_americas:REGION', "**:earth_asia:"+region+"**", true)
 
@@ -126,7 +126,7 @@ let playtimem = (Date.now() - jsonlive.gameStartTime)/1000;
 let playtimes = Date.now() - jsonlive.gameStartTime;
 let lmode = changemod(jsonlive.gameQueueConfigId);
 let lplayer = jsonlive.participants.find(n => n.summonerId === json.id);
-let lchampion = `https://cdn.communitydragon.org/${version[0]}/champion/${lplayer.championId}/data`;
+let lchampion = `https://cdn.communitydragon.org/${version}/champion/${lplayer.championId}/data`;
 const lresult = await request({uri: lchampion, json: true});
 var lemojichamp = bot.emojis.find(e => e.name === lresult.name.replace(' ', '').replace("'", "") && ['597817432840601600','602587428682989568','602587024251420672'].includes(e.guild.id));
 embed.addField('LIVE GAME', 'Playing '+lmode+" as "+lemojichamp+"**"+lresult.name+"**"+" ("+`${playtimem / 60 | 0}:${playtimes % 60}`+")");};
