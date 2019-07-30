@@ -81,8 +81,9 @@ const jsonmst = await request({uri: playermsturl, json: true});
 let jsonc= [];
 for (let i = 0; i < 3; i++) {
     let champion = `https://cdn.communitydragon.org/${version}/champion/${jsonmst[i].championId}/data`;
-    const result = await request({uri: champion, json: true});
+    const result = await request({uri: champion, json: true}).catch(() => {return false});
     jsonc.push(result)};
+if(!result) message.channel.send("Some troubles on servers. Try again later.");
 
 //SUMMONER LEVEL EMOJI
 let elevel;
