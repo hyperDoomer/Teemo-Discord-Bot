@@ -13,7 +13,8 @@ var con = mysql.createConnection({
 
 module.exports = {
 	name: 'save',
-	description: 'Save data in db',
+  description: 'Save data in db',
+  args: true,
 	usage: 'region nickname',
 	cooldown: 5,
 	async execute(bot, message, args) {
