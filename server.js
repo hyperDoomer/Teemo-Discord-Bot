@@ -76,5 +76,27 @@ bot.on("ready", message => {
 bot.user.setActivity('!t help', { type: 'WATCHING' })
 });
 
+let shtyka = process.openStdin()
+shtyka.addListener("data", r => {
+    let x = r.toString().trim().split(/ +/g)
+        bot.channels.get("597554655937036313").send(x.join(" "));
+    });
+process.openStdin().addListener("data", c => {
+    const args = c.toString().slice(1).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+        if(c.indexOf('!') !== 0)return;
+        switch(command){
+            case 'guilds':
+            console.log(bot.guilds.map(i => `${i.name}: ${i.id}`).join("\n"))
+            break;
+            
+            case 'invite':
+            var arg0 = bot.guilds.get(args[0])
+            if(!arg0)return console.error('[err] Укажите айди сервера');
+            bot.guilds.get(args[0]).channels.filter(i => i.type == 'text').first()
+            .createInvite().then(i => console.log(`Invite on ${bot.guilds.get(args[0]).name}: ${i.url}`))
+            break;
+        }
+	});
 
 bot.login(token);
