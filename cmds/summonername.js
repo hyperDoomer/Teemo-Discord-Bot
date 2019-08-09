@@ -16,7 +16,6 @@ module.exports = {
 	description: 'Save data in db',
 	usage: 'region nickname',
 	cooldown: 5,
-  args: true,
 	async execute(bot, message, args) {
 
 let regions = ['EUW', 'NA', 'EUNE', 'BR', 'JP', 'KR', 'LAN', 'LAS', 'OCE', 'TR', 'RU'];
