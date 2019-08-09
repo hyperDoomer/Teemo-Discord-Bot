@@ -28,17 +28,6 @@ if(regions.indexOf(args[0].toUpperCase()) ==-1)  {
     .setFooter('Invite Teemo to your server !t invite', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
     return message.channel.send(i);
 };
-let playerurl = (`https://${region}.api.riotgames.com/lol/summoner/v4/summoners/by-name/${encodeURIComponent(args[1])+'?api_key='+riotkey}`);
-const json = await request({uri: playerurl, json: true}).catch(() => {return false})
-if(!json){
-  let je = new Discord.RichEmbed()
- .setThumbnail(`https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547`)
- .addField(":interrobang: TEEMO BOT :interrobang:", "**Player information:**")
- .addField("<:borderarrowhover5432523452345234:603725501672062987>**Error: 'Wrong name'**<:borderarrowhover2451253412321312:603725502770839572>","**!t player REGION NICKNAME**")
- .setColor('RED')
- .setFooter('Invite Teemo to your server !t invite', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
- return message.channel.send(je)};
-
 let duserid = message.author.id;
 let sql = `INSERT INTO summoners (duserid, region, nickname) VALUES ('${duserid}', '${args[0]}', '${args[1]}') ON DUPLICATE KEY UPDATE region = '${args[0]}', nickname = '${args[1]}'`;
 con.query(sql, function (err, result) {
