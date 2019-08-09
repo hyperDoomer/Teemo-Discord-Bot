@@ -43,7 +43,7 @@ con.query(sql, function (err, result) {
     .setAuthor('Teemo Bot, for server: '+message.guild.name, message.guild.iconURL)
     .setThumbnail(`https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547`)
     .setColor('RED')
-    .setTitle("**Profile Saved \n Now you can use !t player / !t @discordUser **")
+    .setTitle("**Profile Saved \nNow you can use:** !t player / !t @discordUser ")
     .setFooter('Invite Teemo to your server !t invite', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
    message.channel.send(embed);
   }});
