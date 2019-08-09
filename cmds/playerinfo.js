@@ -88,7 +88,8 @@ for (let i = 0; i < 3; i++) {
 
 //SUMMONER LEVEL EMOJI
 let elevel;
-if(json.summonerLevel >=40 && json.summonerLevel <50) { elevel = "<:prestige_lvl_40_inventory1:605440391868710947>"}
+if(json.summonerLevel <40) { elevel = "<:prestige_lvl_40_inventory1:605440391868710947>"}
+else if(json.summonerLevel >=40 && json.summonerLevel <50) { elevel = "<:prestige_lvl_40_inventory1:605440391868710947>"}
 else if(json.summonerLevel >=50 && json.summonerLevel <75) { elevel = "<:prestige_lvl_50_inventory1:605440394368647169>"}
 else if(json.summonerLevel >=75 && json.summonerLevel <100) { elevel = "<:prestige_lvl_75_inventory1:605440395928797204>"}
 else if(json.summonerLevel >=100 && json.summonerLevel <125) { elevel = "<:prestige_lvl_100_inventory1:605440396742623243>"}
