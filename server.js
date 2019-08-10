@@ -76,6 +76,54 @@ bot.on("ready", message => {
 bot.user.setActivity('!t help', { type: 'WATCHING' })
 });
 
+bot.on('message',async message => {
+  if(message.author.bot)
+{
+if(message.embeds)
+{
+  const embedMsg = message.embeds.find(msg => msg.title === '**<:borderarrowhover5432523452345234:603725501672062987>TEEMO BOT ROLES<:borderarrowhover2451253412321312:603725502770839572>**');
+  if(embedMsg)
+  {
+    await embedMsg.message.react('609438100329988171');
+    await message.react('609438100011221025');
+    await message.react('609438100292370442');
+    await message.react('609438100263010314');
+    await message.react('609438103236640787');
+    await message.delete(20000);
+    await (err => console.error);
+  }
+}
+return;
+}
+});
+
+bot.on('messageReactionAdd',async (reaction, user) => {
+
+var roles = ['TOP', 'JUNGLE', 'MID', 'ADC', 'SUPPORT'];
+
+  if(user.bot)
+    return;
+
+  var roleName = reaction.emoji.name;
+  if(!roles.includes(roleName)) return;
+  var role = reaction.message.guild.roles.find(role => role.name.toLowerCase() === roleName.toLowerCase());
+  if(!role){
+    role = await reaction.message.guild.createRole({name: roleName, color: '#c09e16', mentionable: true,});
+  };
+  var member = reaction.message.guild.members.find(member => member.id === user.id);
+
+  if(member.roles.has(role.id))
+  {
+    member.removeRole(role.id)
+    reaction.remove(user);
+    reaction.message.channel.send("**Removed **"+ member.user.username +"**role **" + roleName ); 
+  } 
+  else {
+  member.addRole(role.id);
+  reaction.remove(user); 
+  reaction.message.channel.send("**Added **"+ member.user.username +"**role **" + roleName );
+}});
+
 let shtyka = process.openStdin()
 shtyka.addListener("data", r => {
     let x = r.toString().trim().split(/ +/g)
