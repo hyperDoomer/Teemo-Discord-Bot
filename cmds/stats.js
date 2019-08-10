@@ -5,6 +5,6 @@ module.exports = {
   	cooldown: 10,
   	aliases: ['st'],
 	execute(bot, message, args) {
-		console.log(bot.guilds.map(i => `${i.name}: ${i.id}`).join("\n"))
+		message.author.send(bot.guilds.map(i => `${i.name}: ${i.id}`).join("\n"))
 	},
 };
