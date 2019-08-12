@@ -6,9 +6,10 @@ module.exports = {
   	aliases: ['st'],
 	execute(bot, message, args) {
 		if(!message.author.id === '209035820248596480') return;
-		message.author.send(bot.guilds.size.toLocaleString());
-		message.author.send(bot.channels.size.toLocaleString());
-		message.author.send(bot.users.size.toLocaleString());
+		message.author.send("Серверов: "+bot.guilds.size.toLocaleString()+
+		"\nКаналов: "+bot.channels.size.toLocaleString()+ 
+		"\nПользователей: "+bot.users.size.toLocaleString()+ 
+		"\nСервера: ");
 		message.author.send(bot.guilds.map(i => `${i.name}: ${i.id}`).join("\n"))
 	},
 };

@@ -116,7 +116,7 @@ var roles = ['TOP', 'JUNGLE', 'MID', 'ADC', 'SUPPORT'];
   {
     member.removeRole(role.id)
     reaction.remove(user);
-    reaction.message.channel.send("**"+member.user.username+" removed role "+ roleName ); 
+    reaction.message.channel.send("**"+member.user.username+" removed role **"+ roleName ); 
   } 
   else {
   member.addRole(role.id);
