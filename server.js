@@ -121,7 +121,7 @@ var roles = ['TOP', 'JUNGLE', 'MID', 'ADC', 'SUPPORT'];
   else {
   member.addRole(role.id);
   reaction.remove(user); 
-  reaction.message.channel.send("**"+member.user.username+"**" + "**"+" choosed role "+"**" + roleName );
+  reaction.message.channel.send("**"+member.user.username+" choosed role **" + roleName );
 }});
 
 let shtyka = process.openStdin()
