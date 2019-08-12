@@ -116,12 +116,12 @@ var roles = ['TOP', 'JUNGLE', 'MID', 'ADC', 'SUPPORT'];
   {
     member.removeRole(role.id)
     reaction.remove(user);
-    reaction.message.channel.send("**Removed **"+ member.user.username +"**role **" + roleName ); 
+    reaction.message.channel.send(member.user.username + "**Removed **" + "**role **" + roleName ); 
   } 
   else {
   member.addRole(role.id);
   reaction.remove(user); 
-  reaction.message.channel.send("**Added **"+ member.user.username +"**role **" + roleName );
+  reaction.message.channel.send(member.user.username + "** Added **" + "** role **" + roleName );
 }});
 
 let shtyka = process.openStdin()
