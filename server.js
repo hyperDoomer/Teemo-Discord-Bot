@@ -14,14 +14,14 @@ const config = require('./botconfig.json');
 let prefix = config.prefix;
 let token = config.token;
 
-// Optional events
-dbl.on('posted', () => {
+// Optional events 
+/*dbl.on('posted', () => {
   console.log('Server count posted!');
 });
 
 dbl.on('error', e => {
  console.log(`Oops! ${e}`);
-});
+});*/
 
 
 
