@@ -1,8 +1,8 @@
 const fs = require('fs');
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-/*const DBL = require("dblapi.js");
-const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMTA2NzgxOTk4MzA0NDYwOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTY1NjQxMDIwfQ.H02aYefCY81tbBTmNPzQc_MOXKxWcH9alVnKxGYI10s', bot);*/
+const DBL = require("dblapi.js");
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwMTA2NzgxOTk4MzA0NDYwOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNTY1NjQxMDIwfQ.H02aYefCY81tbBTmNPzQc_MOXKxWcH9alVnKxGYI10s', bot);
 bot.commands = new Discord.Collection();
 const cooldowns = new Discord.Collection();
 const cmdFiles = fs.readdirSync('./cmds').filter(file => file.endsWith('.js'));
@@ -15,13 +15,13 @@ let prefix = config.prefix;
 let token = config.token;
 
 // Optional events 
-/*dbl.on('posted', () => {
+dbl.on('posted', () => {
   console.log('Server count posted!');
 });
 
 dbl.on('error', e => {
  console.log(`Oops! ${e}`);
-});*/
+});
 
 
 
