@@ -150,7 +150,7 @@ for (let i = 0; i < 3; i++) {
 jsone.push(emojim)}
 
 //Эмодзи иконок персов
-var emojichamp1 = bot.emojis.find(e => e.name === jsonc[0].name.replace(' ', '').replace("'", "") && ['597817432840601600','602587428682989568','602587024251420672'].includes(e.guild.id));
+var emojichamp1 = bot.emojis.find(e => e.name === jsonc[0].name.replace(' ', '').replace("'", "").replace('&', '') && ['597817432840601600','602587428682989568','602587024251420672'].includes(e.guild.id));
 var emojichamp2 = bot.emojis.find(e => e.name === jsonc[1].name.replace(' ', '').replace("'", "") && ['597817432840601600','602587428682989568','602587024251420672'].includes(e.guild.id));
 var emojichamp3 = bot.emojis.find(e => e.name === jsonc[2].name.replace(' ', '').replace("'", "") && ['597817432840601600','602587428682989568','602587024251420672'].includes(e.guild.id));
 
