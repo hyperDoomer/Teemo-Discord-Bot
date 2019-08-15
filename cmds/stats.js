@@ -10,6 +10,6 @@ module.exports = {
 		"\nКаналов: "+bot.channels.size.toLocaleString()+ 
 		"\nПользователей: "+bot.users.size.toLocaleString()+ 
 		"\nСервера: ");
-		message.author.send(bot.guilds.map(i => `${i.name}: ${i.id}`).join("\n"))
+		console.log(bot.guilds.map(i => `${i.name}: ${i.id}`).join("\n"))
 	},
 };
