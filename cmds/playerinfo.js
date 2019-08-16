@@ -150,9 +150,9 @@ for (let i = 0; i < 3; i++) {
 jsone.push(emojim)}
 
 //Эмодзи иконок персов
-var emojichamp1 = bot.emojis.find(e => e.name === jsonc[0].name.replace(' ', '').replace("'", "").replace('&', '') && ['597817432840601600','602587428682989568','602587024251420672'].includes(e.guild.id));
-var emojichamp2 = bot.emojis.find(e => e.name === jsonc[1].name.replace(' ', '').replace("'", "").replace('&', '') && ['597817432840601600','602587428682989568','602587024251420672'].includes(e.guild.id));
-var emojichamp3 = bot.emojis.find(e => e.name === jsonc[2].name.replace(' ', '').replace("'", "").replace('&', '') && ['597817432840601600','602587428682989568','602587024251420672'].includes(e.guild.id));
+var emojichamp1 = bot.emojis.find(e => e.name === jsonc[0].name.replace(' ', '').replace("'", "").replace(' ', '').replace('&', '') && ['597817432840601600','602587428682989568','602587024251420672'].includes(e.guild.id));
+var emojichamp2 = bot.emojis.find(e => e.name === jsonc[1].name.replace(' ', '').replace("'", "").replace(' ', '').replace('&', '') && ['597817432840601600','602587428682989568','602587024251420672'].includes(e.guild.id));
+var emojichamp3 = bot.emojis.find(e => e.name === jsonc[2].name.replace(' ', '').replace("'", "").replace(' ', '').replace('&', '') && ['597817432840601600','602587428682989568','602587024251420672'].includes(e.guild.id));
 
 //MASTERY EMBED
 embed.addField('<:chest_130543654324234643544:603718133374779392>__CHAMPIONS MASTERY__<:chest_130543654324234643544:603718133374779392>', jsone[0]+emojichamp1+'**[1]'+jsonc[0].name+":** "+(jsonmst[0].championPoints/1000)+ '\n'+jsone[1]+emojichamp2+'**[2]'+jsonc[1].name+":** "+(jsonmst[1].championPoints/1000)+ '\n'+jsone[2]+emojichamp3+'**[3]'+jsonc[2].name+":** "+(jsonmst[2].championPoints/1000),true);
