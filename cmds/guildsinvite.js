@@ -3,7 +3,8 @@ module.exports = {
 	name: 'ginvite',
 	description: 'Guild invite',
   	cooldown: 10,
-    aliases: ['gi'],
+	aliases: ['gi'],
+	guildOnly: false,
 	execute(bot, message, args) {
 if(!message.author.id === '209035820248596480') return;
 var arg0 = bot.guilds.get(args[0])

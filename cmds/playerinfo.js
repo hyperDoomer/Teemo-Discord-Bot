@@ -11,7 +11,8 @@ module.exports = {
 	description: 'Player information',
 	aliases: ['info','profile','p'],
 	usage: '[!t player REGION NICKNAME]',
-	cooldown: 5,
+  cooldown: 5,
+  guildOnly: true,
 	async execute(bot, message, args) {
 
 

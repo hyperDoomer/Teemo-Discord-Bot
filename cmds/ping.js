@@ -3,7 +3,8 @@ module.exports = {
 	name: 'ping',
 	description: 'Ping!',
   	cooldown: 3,
-  	aliases: ['ping'],
+	aliases: ['ping'],
+	guildOnly: false,
 	execute(bot, message, args) {
 	const embed = new Discord.RichEmbed()
     	.setColor('GREEN')

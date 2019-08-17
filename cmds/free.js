@@ -10,7 +10,8 @@ module.exports = {
 	description: 'Free champions',
 	aliases: ['f'],
 	usage: '[f]',
-	cooldown: 5,
+        cooldown: 15,
+        guildOnly: true,
 	async execute(bot, message, args) {
 
 //ПРОВЕРКА РЕГИОНА

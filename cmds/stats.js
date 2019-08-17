@@ -3,7 +3,8 @@ module.exports = {
 	name: 'stats',
 	description: 'Bot statistics',
   	cooldown: 10,
-  	aliases: ['st'],
+	aliases: ['st'],
+	guildOnly: false,
 	execute(bot, message, args) {
 		if(!message.author.id === ('209035820248596480' || '209032148349353984' || '284696813494337536')) return;
 		message.author.send("Серверов: "+bot.guilds.size.toLocaleString()+

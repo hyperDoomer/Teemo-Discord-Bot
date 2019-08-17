@@ -2,7 +2,8 @@ const Discord = module.require("discord.js");
 module.exports = {
 	name: 'roles',
 	description: 'Roles',
-  	cooldown: 10,
+        cooldown: 10,
+        guildOnly: true,
     aliases: ['role'],
     args: false,
 	execute(bot, message, args) {

@@ -8,6 +8,7 @@ module.exports = {
 	usage: '[commands]',
 	cooldown: 5,
   args: false,
+  guildOnly: false,
 	execute(bot, message, args) {
    
 let embed = new Discord.RichEmbed()

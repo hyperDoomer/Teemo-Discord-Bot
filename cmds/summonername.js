@@ -16,7 +16,8 @@ module.exports = {
   description: 'Save data in db',
   args: true,
 	usage: 'region nickname',
-	cooldown: 5,
+  cooldown: 5,
+  guildOnly: false,
 	async execute(bot, message, args) {
 
 let regions = ['EUW', 'NA', 'EUNE', 'BR', 'JP', 'KR', 'LAN', 'LAS', 'OCE', 'TR', 'RU'];
