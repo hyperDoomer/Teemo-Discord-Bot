@@ -41,7 +41,7 @@ if (!message.content.startsWith(prefix) || message.author.bot) return;
 
 const command = bot.commands.get(commandName)
 || bot.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
-  if (!command) bot.commands.get('help').execute(bot, message, ['']);
+  if (!command) return bot.commands.get('help').execute(bot, message, ['']);
   
   if (command.guildOnly && message.channel.type !== 'text') {
 	return message.reply('I can\'t execute that command inside DMs!');
