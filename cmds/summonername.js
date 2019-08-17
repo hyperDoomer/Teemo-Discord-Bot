@@ -17,7 +17,7 @@ module.exports = {
   args: true,
 	usage: 'region nickname',
   cooldown: 5,
-  guildOnly: false,
+  guildOnly: true,
 	async execute(bot, message, args) {
 
 let regions = ['EUW', 'NA', 'EUNE', 'BR', 'JP', 'KR', 'LAN', 'LAS', 'OCE', 'TR', 'RU'];
