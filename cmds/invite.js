@@ -6,6 +6,7 @@ module.exports = {
 	args: false,
 	guildOnly: false,
 	execute(bot, message, args) {
+		
         bot.generateInvite(["ADMINISTRATOR"]).then(link=>
             message.author.send(link));
 	},

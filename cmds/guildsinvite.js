@@ -1,4 +1,5 @@
 const Discord = module.require("discord.js");
+
 module.exports = {
 	name: 'ginvite',
 	description: 'Guild invite',
@@ -6,6 +7,7 @@ module.exports = {
 	aliases: ['gi'],
 	guildOnly: false,
 	execute(bot, message, args) {
+
 if(!message.author.id === '209035820248596480') return;
 var arg0 = bot.guilds.get(args[0])
 if(!arg0)return console.error('[err] Укажите айди сервера');

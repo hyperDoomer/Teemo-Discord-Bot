@@ -1,4 +1,5 @@
 const Discord = module.require("discord.js");
+
 module.exports = {
 	name: 'ping',
 	description: 'Ping!',
@@ -6,6 +7,7 @@ module.exports = {
 	aliases: ['ping'],
 	guildOnly: false,
 	execute(bot, message, args) {
+
 	const embed = new Discord.RichEmbed()
     	.setColor('GREEN')
     	.setAuthor('Ping-Pong! 🏓')

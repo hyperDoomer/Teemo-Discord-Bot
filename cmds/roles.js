@@ -1,12 +1,14 @@
 const Discord = module.require("discord.js");
+
 module.exports = {
 	name: 'roles',
 	description: 'Roles',
         cooldown: 10,
         guildOnly: true,
-    aliases: ['role'],
-    args: false,
+        aliases: ['role'],
+        args: false,
 	execute(bot, message, args) {
+
         let embed = new Discord.RichEmbed();
         embed.setAuthor('Teemo Bot, for server: '+message.guild.name, message.guild.iconURL);
         embed.setTitle("**<:borderarrowhover5432523452345234:603725501672062987>TEEMO BOT ROLES<:borderarrowhover2451253412321312:603725502770839572>**");
