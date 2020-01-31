@@ -13,7 +13,7 @@ module.exports = {
 		"Серверов: "+bot.guilds.size.toLocaleString()+
 		"\nКаналов: "+bot.channels.size.toLocaleString()+ 
 		"\nПользователей: "+bot.users.size.toLocaleString()+
-		"\nТоп 5: "+bot.guilds.sort((p,n) => n.memberCount-p.memberCount).first(5).map(g => `${g.name}: ${g.memberCount}`).join('\n'));
+		"\nТоп 5: \n"+bot.guilds.sort((p,n) => n.memberCount-p.memberCount).first(5).map(g => `${g.name}: ${g.memberCount}`).join('\n'));
 		console.log(bot.guilds.map(i => `${i.name}: ${i.id}`).join("\n"));
 	},
 };
