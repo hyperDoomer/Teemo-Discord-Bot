@@ -12,7 +12,7 @@ module.exports = {
 		message.author.send("Серверов: "+bot.guilds.size.toLocaleString()+
 		"\nКаналов: "+bot.channels.size.toLocaleString()+ 
 		"\nПользователей: "+bot.users.size.toLocaleString());
-		message.author.send(bot.guilds.sort((p,n) => n.memberCount-p.memberCount).map(g=>g.name).first(5).join(' '));
+		message.author.send(bot.guilds.sort((p,n) => n.memberCount-p.memberCount).first(5).map(g=>g.name).join(' '));
 		console.log(bot.guilds.map(i => `${i.name}: ${i.id}`).join("\n"))
 	},
 };
