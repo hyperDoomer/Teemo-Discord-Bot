@@ -1,4 +1,4 @@
-const Discord = module.require("discord.js");
+/*const Discord = module.require("discord.js");
 const request = require('request-promise');
 const config = require ('../botconfig.json');
 const changereg = require('../changereg.js');
@@ -64,3 +64,4 @@ let embed = new Discord.RichEmbed()
 message.channel.send(embed)
 
 }};
+*/
