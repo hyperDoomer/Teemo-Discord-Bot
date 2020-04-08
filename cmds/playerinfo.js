@@ -73,6 +73,9 @@ if(!json){
 //SUMMONER LEAGUE
 let playeridurl = (`https://${region}.api.riotgames.com/lol/league/v4/entries/by-summoner/${json.id+'?api_key='+riotkey}`);
 const jsonid = await request({uri: playeridurl, json: true});
+//TFT
+let tftplayeridurl = (`https://${region}.api.riotgames.com/tft/league/v1/entries/by-summoner/${json.id+'?api_key='+riotkey}`)
+const tftjsonid = await request({uri: tftplayeridurl, json: true});
 
 //SUMMONER MASTERY
 let playermsturl = (`https://${region}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/${json.id+'?api_key='+riotkey}`);
@@ -167,7 +170,7 @@ embed.addField('<:iconvictory231412342134213444:605430936900993035>__RANKED FLEX
 };
 
 //TFT
-var ranktft = jsonid.find(n => n.queueType === 'RANKED_TFT');
+var ranktft = tftjsonid.find(n => n.queueType === 'RANKED_TFT');
 if(!ranktft) {embed.addField('<:iconvictory2123123123214154545:605431423351914499>__RANKED TFT__<:iconvictory2123123123214154545:605431423351914499>', "<:unranked123563425435234523453245:603727489680015360>**UNRANKED**<:unranked123563425435234523453245:603727489680015360>", true);} else{
 var emojiranktft = bot.emojis.find(e => e.name === `${ranktft.tier}` && ['401153786674151424'].includes(e.guild.id));
 let tftwinrate = (100*(ranktft.wins/(ranktft.wins+ranktft.losses))).toFixed(1);
