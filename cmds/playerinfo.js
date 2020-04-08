@@ -73,7 +73,7 @@ if(!json){
 //SUMMONER LEAGUE
 let playeridurl = (`https://${region}.api.riotgames.com/lol/league/v4/entries/by-summoner/${json.id+'?api_key='+riotkey}`);
 const jsonid = await request({uri: playeridurl, json: true});
-//TFT
+//TFT 
 let tftplayeridurl = (`https://${region}.api.riotgames.com/tft/league/v1/entries/by-summoner/${json.id+'?api_key='+riotkey}`)
 const tftjsonid = await request({uri: tftplayeridurl, json: true});
 
