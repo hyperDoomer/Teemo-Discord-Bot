@@ -181,7 +181,7 @@ embed.addField('<:iconvictory2123123123214154545:605431423351914499>__RANKED TFT
 */
 
 //
-embed.setFooter('Invite Teemo to your server !t invite', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
+embed.setFooter('Invite Teemo to your server !t invite / SUPPORT hyperdoomer@gmail.com ', 'https://cdn.glitch.com/a90c18e0-56f5-4217-a721-f16cb4d618d4%2F190-1900167_super-teemo.png?v=1563898152547');
 message.channel.send(embed)
   
 }};
