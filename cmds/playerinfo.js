@@ -148,6 +148,14 @@ let rswinrate = (100*(ranksolo.wins/(ranksolo.wins+ranksolo.losses))).toFixed(1)
 embed.addField('<:iconvictory231412342134213444:605430936900993035>__RANKED SOLO/DUO__<:iconvictory231412342134213444:605430936900993035>', emojirank + "**"+ranksolo.tier + ' ' + ranksolo.rank+"**" +" "+ranksolo.leaguePoints+'LP'+ emojirank + '\n **Wins**: '+ranksolo.wins+' **Losses**: '+ranksolo.losses+'\n **Winrate**: '+rswinrate+"%" , true);
 };
 
+//FLEX
+var rankflex = jsonid.find(n => n.queueType === 'RANKED_FLEX_SR');
+if(!rankflex) {embed.addField('<:iconvictory231412342134213444:605430936900993035>__RANKED FLEX__<:iconvictory231412342134213444:605430936900993035>', "<:unranked123563425435234523453245:603727489680015360>**UNRANKED**<:unranked123563425435234523453245:603727489680015360>", true);} else{
+var emojirankf = bot.emojis.find(e => e.name === `${rankflex.tier}` && ['401153786674151424'].includes(e.guild.id));
+let fwinrate = (100*(rankflex.wins/(rankflex.wins+rankflex.losses))).toFixed(1);
+embed.addField('<:iconvictory231412342134213444:605430936900993035>__RANKED FLEX__<:iconvictory231412342134213444:605430936900993035>', emojirankf + "**"+rankflex.tier + ' ' + rankflex.rank+"**" +" "+rankflex.leaguePoints+'LP'+ emojirankf + '\n **Wins**: '+rankflex.wins+' **Losses**: '+rankflex.losses+'\n **Winrate**: '+fwinrate+"%"  ,true);
+};
+
 //MASTERY
 //эмодзи мастери ранга
 let jsone= [];
@@ -162,14 +170,6 @@ var emojichamp3 = bot.emojis.find(e => e.name === jsonc[2].name.replace(' ', '')
 
 //MASTERY EMBED
 embed.addField('<:chest_130543654324234643544:603718133374779392>__CHAMPIONS MASTERY__<:chest_130543654324234643544:603718133374779392>', jsone[0]+emojichamp1+'**[1]'+jsonc[0].name+":** "+(jsonmst[0].championPoints/1000)+ '\n'+jsone[1]+emojichamp2+'**[2]'+jsonc[1].name+":** "+(jsonmst[1].championPoints/1000)+ '\n'+jsone[2]+emojichamp3+'**[3]'+jsonc[2].name+":** "+(jsonmst[2].championPoints/1000),true);
-
-//FLEX
-var rankflex = jsonid.find(n => n.queueType === 'RANKED_FLEX_SR');
-if(!rankflex) {embed.addField('<:iconvictory231412342134213444:605430936900993035>__RANKED FLEX__<:iconvictory231412342134213444:605430936900993035>', "<:unranked123563425435234523453245:603727489680015360>**UNRANKED**<:unranked123563425435234523453245:603727489680015360>", true);} else{
-var emojirankf = bot.emojis.find(e => e.name === `${rankflex.tier}` && ['401153786674151424'].includes(e.guild.id));
-let fwinrate = (100*(rankflex.wins/(rankflex.wins+rankflex.losses))).toFixed(1);
-embed.addField('<:iconvictory231412342134213444:605430936900993035>__RANKED FLEX__<:iconvictory231412342134213444:605430936900993035>', emojirankf + "**"+rankflex.tier + ' ' + rankflex.rank+"**" +" "+rankflex.leaguePoints+'LP'+ emojirankf + '\n **Wins**: '+rankflex.wins+' **Losses**: '+rankflex.losses+'\n **Winrate**: '+fwinrate+"%"  ,true);
-};
 
 //TFT
 /*
