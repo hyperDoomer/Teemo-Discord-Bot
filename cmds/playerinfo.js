@@ -142,18 +142,18 @@ embed.addField('LIVE GAME', 'Playing '+lmode+" as "+lemojichamp+"**"+lresult.nam
 
 //SOLO
 var ranksolo = jsonid.find(n => n.queueType === 'RANKED_SOLO_5x5');
-if(!ranksolo) {embed.addField('<:iconvictory231412342134213444:605430936900993035>__RANKED SOLO/DUO__<:iconvictory231412342134213444:605430936900993035>', "<:unranked123563425435234523453245:603727489680015360>**UNRANKED**<:unranked123563425435234523453245:603727489680015360>", true);} else{
+if(!ranksolo) {embed.addField('<:iconvictory231412342134213444:605430936900993035>__SOLO/DUO__<:iconvictory231412342134213444:605430936900993035>', "<:unranked123563425435234523453245:603727489680015360>**UNRANKED**<:unranked123563425435234523453245:603727489680015360>", true);} else{
 var emojirank = bot.emojis.find(e => e.name === `${ranksolo.tier}` && ['401153786674151424'].includes(e.guild.id));
 let rswinrate = (100*(ranksolo.wins/(ranksolo.wins+ranksolo.losses))).toFixed(1);
-embed.addField('<:iconvictory231412342134213444:605430936900993035>__RANKED SOLO/DUO__<:iconvictory231412342134213444:605430936900993035>', emojirank + "**"+ranksolo.tier + ' ' + ranksolo.rank+"**" +" "+ranksolo.leaguePoints+'LP'+ emojirank + '\n **Wins**: '+ranksolo.wins+' **Losses**: '+ranksolo.losses+'\n **Winrate**: '+rswinrate+"%" , true);
+embed.addField('<:iconvictory231412342134213444:605430936900993035>__SOLO/DUO__<:iconvictory231412342134213444:605430936900993035>', emojirank + "**"+ranksolo.tier + ' ' + ranksolo.rank+"**" +" "+ranksolo.leaguePoints+'LP'+ emojirank + '\n **Wins**: '+ranksolo.wins+' **Losses**: '+ranksolo.losses+'\n **Winrate**: '+rswinrate+"%" , true);
 };
 
 //FLEX
 var rankflex = jsonid.find(n => n.queueType === 'RANKED_FLEX_SR');
-if(!rankflex) {embed.addField('<:iconvictory231412342134213444:605430936900993035>__RANKED FLEX__<:iconvictory231412342134213444:605430936900993035>', "<:unranked123563425435234523453245:603727489680015360>**UNRANKED**<:unranked123563425435234523453245:603727489680015360>", true);} else{
+if(!rankflex) {embed.addField('<:iconvictory231412342134213444:605430936900993035>__FLEX__<:iconvictory231412342134213444:605430936900993035>', "<:unranked123563425435234523453245:603727489680015360>**UNRANKED**<:unranked123563425435234523453245:603727489680015360>", true);} else{
 var emojirankf = bot.emojis.find(e => e.name === `${rankflex.tier}` && ['401153786674151424'].includes(e.guild.id));
 let fwinrate = (100*(rankflex.wins/(rankflex.wins+rankflex.losses))).toFixed(1);
-embed.addField('<:iconvictory231412342134213444:605430936900993035>__RANKED FLEX__<:iconvictory231412342134213444:605430936900993035>', emojirankf + "**"+rankflex.tier + ' ' + rankflex.rank+"**" +" "+rankflex.leaguePoints+'LP'+ emojirankf + '\n **Wins**: '+rankflex.wins+' **Losses**: '+rankflex.losses+'\n **Winrate**: '+fwinrate+"%"  ,true);
+embed.addField('<:iconvictory231412342134213444:605430936900993035>__FLEX__<:iconvictory231412342134213444:605430936900993035>', emojirankf + "**"+rankflex.tier + ' ' + rankflex.rank+"**" +" "+rankflex.leaguePoints+'LP'+ emojirankf + '\n **Wins**: '+rankflex.wins+' **Losses**: '+rankflex.losses+'\n **Winrate**: '+fwinrate+"%"  ,true);
 };
 
 //MASTERY
@@ -169,7 +169,7 @@ var emojichamp2 = bot.emojis.find(e => e.name === jsonc[1].name.replace(' ', '')
 var emojichamp3 = bot.emojis.find(e => e.name === jsonc[2].name.replace(' ', '').replace("'", "").replace(' ', '').replace('&', '') && ['597817432840601600','602587428682989568','602587024251420672'].includes(e.guild.id));
 
 //MASTERY EMBED
-embed.addField('<:chest_130543654324234643544:603718133374779392>__CHAMPIONS MASTERY__<:chest_130543654324234643544:603718133374779392>', jsone[0]+emojichamp1+'**[1]'+jsonc[0].name+":** "+(jsonmst[0].championPoints/1000)+ '\n'+jsone[1]+emojichamp2+'**[2]'+jsonc[1].name+":** "+(jsonmst[1].championPoints/1000)+ '\n'+jsone[2]+emojichamp3+'**[3]'+jsonc[2].name+":** "+(jsonmst[2].championPoints/1000),true);
+embed.addField('<:chest_130543654324234643544:603718133374779392>__MASTERY__<:chest_130543654324234643544:603718133374779392>', jsone[0]+emojichamp1+'**[1]'+jsonc[0].name+":** "+(jsonmst[0].championPoints/1000)+ '\n'+jsone[1]+emojichamp2+'**[2]'+jsonc[1].name+":** "+(jsonmst[1].championPoints/1000)+ '\n'+jsone[2]+emojichamp3+'**[3]'+jsonc[2].name+":** "+(jsonmst[2].championPoints/1000),true);
 
 //TFT
 /*
